@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+
+  <persistence-unit name="exercicio" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<property name="hibernate.archive.autodetection" value="class"/>
+			<property name="hibernate.show_sql"              value="true"/>
+			<property name="hibernate.format_sql"            value="true"/>
+
+            <property name="javax.persistence.jdbc.driver"   value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url"      value="jdbc:mysql://localhost:3306/banco"/>
+            <property name="javax.persistence.jdbc.user"     value="root"/>
+            <property name="javax.persistence.jdbc.password" value="carlos"/>
+
+			<property name="hibernate.dialect"               value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+		</properties>
+	</persistence-unit>
+</persistence>
